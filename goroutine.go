@@ -19,9 +19,9 @@ func f(from string) {
 
 func main() {
 
-    f("direct")         
+    f("direct")         // run a function directly, follows default go concurrency
 
-    go f("goroutine")
+    go f("goroutine")   // run a function in a go routine, excutes synchronously
 
     go func(msg string) {
         fmt.Println(msg)
